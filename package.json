@@ -1,0 +1,14 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "Simple landing page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Vladimir Jovanovic",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
