@@ -1,5 +1,53 @@
-$primaryColor: #444;
+
+html {
+	box-sizing: border-box;
+	font-family: museosans, sans-serif;
+}
 
 body {
-	background: $primaryColor;
+	height: 100vh;
+	line-height: 1.5;
+	margin: 0;
+	display: grid;
+}
+
+/* Making three-column layout, with a main column with gutters on both ends. */
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 
+		[full-start] minmax(1em, 1fr)
+		[main-start] minmax(0, 40em) [main-end]
+		minmax(1em, 1fr) [full-end];
+}
+
+/* Making all elements of the wrapper class contained within main column. */
+
+.wrapper > * {
+	grid-column: main;
+}
+
+/*  */
+
+.wrapper > .full {
+	display: inherit;
+	grid-column: full;
+	grid-template-columns: inherit;
+}
+.wrapper > .full > .content {
+	grid-column: main;
+}
+
+#hero {
+	background-color: green;
+}
+
+.btn {
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	border: none;
+	border-radius: 25px;
+	text-align: center; 
 }
