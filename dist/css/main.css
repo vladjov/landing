@@ -8,26 +8,70 @@ body {
   margin: 0;
   display: grid; }
 
+a {
+  text-decoration: none; }
+
 /* Making three-column layout, with a main column with gutters on both ends. */
+/* All elements of the wrapper class are contained within main column. */
+/* The ones with a class of full are stretching entire witdth of grid layout (from full-start to full-end). */
+/* Refactoring with nested styles */
 .wrapper {
   display: grid;
-  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 40em) [main-end] minmax(1em, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(1rem, 1fr) [main-start] minmax(0, 60rem) [main-end] minmax(1rem, 1fr) [full-end]; }
+  .wrapper * {
+    grid-column: main; }
+  .wrapper .full {
+    display: inherit;
+    grid-column: full;
+    grid-template-columns: inherit; }
+    .wrapper .full .content {
+      grid-column: main;
+      margin-top: auto;
+      margin-bottom: auto; }
 
-/* Making all elements of the wrapper class contained within main column. */
-.wrapper > * {
-  grid-column: main; }
+header, footer {
+  margin: 10px 0 0 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
 
-/*  */
-.wrapper > .full {
-  display: inherit;
-  grid-column: full;
-  grid-template-columns: inherit; }
+footer {
+  background-color: gray; }
 
-.wrapper > .full > .content {
-  grid-column: main; }
+.navItems {
+  list-style: none; }
+  .navItems li {
+    margin-left: 10px;
+    display: inline-block; }
+
+.mainNav {
+  margin: 10px 0 0 0; }
+  .mainNav li {
+    padding: 10px 0 30px 0;
+    border-bottom: 2px solid black; }
+
+.copyright {
+  display: inline-block; }
+
+.social {
+  float: right; }
 
 #hero {
-  background-color: green; }
+  /* 	width: 100%; */
+  min-height: 300px;
+  max-height: 800px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hero.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff; }
+
+#slider {
+  /* 	width: 100%; */
+  min-height: 400px;
+  max-height: 800px;
+  background: url("../img/slide1.png");
+  text-align: center; }
 
 .btn {
   background-color: blue;
@@ -37,3 +81,8 @@ body {
   border: none;
   border-radius: 25px;
   text-align: center; }
+
+.slideControl {
+  background: none;
+  border: 3px solid white;
+  border-radius: 50%; }
