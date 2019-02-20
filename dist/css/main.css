@@ -4,12 +4,34 @@ html {
 
 body {
   height: 100vh;
-  /* 	line-height: 1.5; */
+  line-height: 1.5;
   margin: 0;
   display: grid; }
 
+header, footer {
+  /* 	max-height: 70px; */
+  margin: auto 0 auto 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
+  header ul, footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right; }
+  header li, footer li {
+    display: inline; }
+
 a {
   text-decoration: none; }
+
+.btn {
+  background-color: #0050f7;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  text-align: center; }
 
 /* Making three-column layout, with a main column with gutters on both ends. */
 /* All elements of the wrapper class are contained within main column. */
@@ -29,37 +51,23 @@ a {
       margin-top: auto;
       margin-bottom: auto; }
 
-header, footer {
-  max-height: 70px;
-  margin: auto 0 auto 0;
-  align-items: center;
-  display: flex;
-  justify-content: space-between; }
-
 .logo {
   float: left;
-  height: 40px; }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  float: right; }
-
-li {
-  display: inline; }
+  height: 40px;
+  padding: 1.3em 0; }
 
 .mainNav a {
+  font-size: smaller;
   font-weight: bold;
+  line-height: 1em;
   color: black;
   display: inline-block;
   margin-left: 20px;
-  padding: 20px 0 22px 0;
+  padding: 2.5em 0 2.5em 0;
   border-bottom: 4px solid #fff; }
 
 .mainNav a:hover {
-  border-bottom: 4px solid #0050f7;
-  color: #0050f7; }
+  border-bottom: 4px solid #0050f7; }
 
 #hero {
   min-height: 25em;
@@ -85,15 +93,6 @@ h1 {
   #slider p {
     width: 80%;
     margin: auto; }
-
-.btn {
-  background-color: #0050f7;
-  color: white;
-  /* font-weight: bold; */
-  padding: 10px 15px;
-  border: none;
-  border-radius: 25px;
-  text-align: center; }
 
 .slideControl {
   margin: auto 0;
@@ -186,3 +185,10 @@ footer {
 
 .social .yt {
   background-position: -52px -118px; }
+
+article ul {
+  list-style-type: circle;
+  padding-inline-start: 1em; }
+
+article li {
+  display: list-item; }

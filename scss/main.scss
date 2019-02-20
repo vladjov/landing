@@ -5,13 +5,41 @@ html {
 
 body {
 	height: 100vh;
-/* 	line-height: 1.5; */
+	line-height: 1.5;
 	margin: 0;
 	display: grid;
 }
 
+header, footer {
+/* 	max-height: 70px; */
+	margin: auto 0 auto 0;
+	align-items: center;
+	display: flex; 
+	justify-content: space-between;
+
+	ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	}
+
+	li {
+		display: inline;
+	}
+}
+
 a {
 	text-decoration: none;
+}
+
+.btn {
+	background-color: #0050f7;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 25px;
+	text-align: center;	
 }
 
 /* Making three-column layout, with a main column with gutters on both ends. */
@@ -40,44 +68,29 @@ a {
 }
 
 
-header, footer {
-	max-height: 70px;
-	margin: auto 0 auto 0;
-	align-items: center;
-	display: flex; 
-	justify-content: space-between;
-}
 
 // Header styles 
 
 .logo {
 	float: left;
 	height: 40px;
+	padding: 1.3em 0;
 }
 
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	float: right;
-}
-
-li {
-	display: inline;
-}
 
 .mainNav {
 	a {
-	font-weight: bold;
-	color: black;
-	display: inline-block;
-	margin-left: 20px;
-	padding: 20px 0 22px 0;
-	border-bottom: 4px solid #fff;
+		font-size: smaller;
+		font-weight: bold;
+		line-height: 1em;
+		color: black;
+		display: inline-block;
+		margin-left: 20px;
+		padding: 2.5em 0 2.5em 0;
+		border-bottom: 4px solid #fff;
 	}
 	a:hover {
-	border-bottom: 4px solid #0050f7; 
-	color: #0050f7;
+		border-bottom: 4px solid #0050f7; 
 	}
 }
 
@@ -117,15 +130,6 @@ h1 {
 	}
 }
 
-.btn {
-	background-color: #0050f7;
-	color: white;
-	/* font-weight: bold; */
-	padding: 10px 15px;
-	border: none;
-	border-radius: 25px;
-	text-align: center;	
-}
 
 .slideControl {
 	margin: auto 0;
@@ -250,4 +254,15 @@ footer {
 		background-position: -52px -118px;
 	}
 
+}
+
+article {
+	ul {
+		list-style-type: circle;
+		padding-inline-start: 1em;
+	}
+	
+	li {
+		display: list-item;
+	}
 }
