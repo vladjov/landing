@@ -10,27 +10,38 @@
 <body>
 	<div class="wrapper">
 		
-		<header>
-			
-			<a href="index.html">
-				<img class="logo" src="img/logo.png" alt="Logo">
-			</a>
-			<nav>
-				<ul class="mainNav">
-					<li><a href="#">What we do</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
 		
 		<section class="full" id="hero">
-			<div class="content">
-				<h1>
+			<header class="full">
+				<div id="headerContent" class="content">
+					
+					<!-- burger -->
+
+					<input type="checkbox" id="burger" class="hidden">
+					<label for="burger" class="burgerButton">
+						<i></i>
+						<i></i>
+						<i></i>
+					</label>
+					
+					<a href="index.html">
+						<img class="logo" src="img/logo.png" alt="Logo">
+					</a>
+					<nav  class="mainNav">
+						<ul>
+							<li><a href="#">What we do</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<div class="heroContent">
+				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				</h1>
-				<a href="#" class="btn">Sign up now &#10095;</a>
+				</p>
+				<a href="#" class="btn">Sign up now <i class="right"></i></a>
 			</div>
 		</section>
 		
@@ -49,36 +60,50 @@
 
 		<section class="full" id="slider">
 			<div class="content">
-				<a href="#" class="slideControl">&#10094;</a>
-				<a href="#" class="slideControl">&#10095;</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores amet, ea placeat animi veritatis.</p>
-				<a href="#" class="btn">Contact us &#10095;</a>
+				<a href="#" class="slideControl" id="left"><i class="left"></i></a>
+				<a href="#" class="slideControl" id="right"><i class="right"></i></a>
+			<!-- 	<ul>
+				<li><img src="img/slide1.png" alt="Slide One"></li>
+				<li><img src="img/slide2.png" alt="Slide Two"></li>
+				<li><img src="img/slide3.png" alt="Slide Three"></li>
+			</ul> -->
+				<div class="sliderContent">
+					<h2>Lorem ipsum dolor sit amet.</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores amet, ea placeat animi veritatis.</p>
+					<a href="#" class="btn">Contact us <i class="right"></i></a>	
+				</div>
 			</div>
 		</section>
 
 		<section class="news content">
 			<h2>More news</h2>
 			<div class="newsBoxes">
-				<div class="box1">
+				<div class="box" id="box1">
 					<div class="imgBox" id="one">
 					</div>
-					<h5>March</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, id!</p>
+					<div class="contBox">
+						<h5>March</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, id!</p>	
+					</div>
 				</div>
-				<div class="box2">
+				<div class="box" id="box2">
 					<div class="imgBox" id="two"></div>
-					<h5>Jun</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus eligendi facilis harum earum! Laboriosam, expedita?</p>
+					<div class="contBox">
+						<h5>Jun</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus eligendi facilis harum earum! Laboriosam, expedita?</p>
+					</div>
 				</div>
-				<div class="box3">
+				<div class="box" id="box3">
 					<div class="imgBox" id="three">
 					</div>
-					<h5>September</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vel.</p>
+					<div class="contBox">
+						<h5>September</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vel.</p>
+					</div>
 				</div>
 			</div>
 			<div class="mediaBtn">
-				<a href="#" class="btn">See all media &#10095;</a>
+				<a href="#" class="btn">See all media <i class="right"></i></a>
 			</div>
 		</section>
 
