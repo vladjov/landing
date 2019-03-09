@@ -58,22 +58,56 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos iusto pariatur quasi alias repudiandae id eveniet, voluptatum harum! Illo quis tempore fuga blanditiis eum aspernatur!</p>
 		</article>
 
-		<section class="full" id="slider">
+		<!-- <section class="full" id="slider">
 			<div class="content">
 				<a href="#" class="slideControl" id="left"><i class="left"></i></a>
 				<a href="#" class="slideControl" id="right"><i class="right"></i></a>
-			<!-- 	<ul>
-				<li><img src="img/slide1.png" alt="Slide One"></li>
-				<li><img src="img/slide2.png" alt="Slide Two"></li>
-				<li><img src="img/slide3.png" alt="Slide Three"></li>
-			</ul> -->
+		
 				<div class="sliderContent">
 					<h2>Lorem ipsum dolor sit amet.</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores amet, ea placeat animi veritatis.</p>
 					<a href="#" class="btn">Contact us <i class="right"></i></a>	
 				</div>
 			</div>
-		</section>
+		</section> -->
+		
+		
+		<div id="slider" class="full">
+			<div class="arrow content" id="arrowLeft"><i class="left"></i></div>
+			
+			<div class="slide slide1 full">
+				<div class="slideContent content">
+					<span>
+						<h2>Lorem ipsum dolor sit amet.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores amet, ea placeat animi veritatis.</p>
+					</span>
+					<a href="#" class="btn">Contact us <i class="right"></i></a>
+				</div>	
+			</div>
+			<div class="slide slide2 full">
+				<div class="slideContent content">
+					<span>
+						<h2>Lorem ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</span>
+					<a href="#" class="btn">Contact us <i class="right"></i></a>
+				</div>	
+			</div>
+			<div class="slide slide3 full">
+				<div class="slideContent content">
+					<span>
+						<h2>Lorem ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores amet</p>
+					</span>
+					<a href="#" class="btn">Contact us <i class="right"></i></a>
+				</div>	
+			</div>
+
+			<div class="arrow content" id="arrowRight"><i class="right"></i></div>
+		</div>
+	
+
+
 
 		<section class="news content">
 			<h2>More news</h2>
@@ -120,5 +154,56 @@
 			</div>
 		</footer>
 	</div>
+
+	<script>
+		let sliderImages = document.querySelectorAll(".slide"),
+			arrowLeft = document.querySelector("#arrowLeft"),
+			arrowRight = document.querySelector("#arrowRight"),
+			current = 0;
+		// Clear all images
+		function reset() {
+			for(let i = 0; i < sliderImages.length; i++) {
+				sliderImages[i].style.display = "none";
+			}
+		}
+
+		// Init slider
+		function startSlide() {
+			reset();
+			sliderImages[0].style.display = "block";
+		}
+		// Show prev
+		function slideLeft() {
+			reset();
+			sliderImages[current - 1].style.display = "block";
+			current--;
+		}
+
+		// Show next 
+		function slideRight() {
+			reset();
+			sliderImages[current + 1].style.display = "block";
+			current++;
+		}
+
+		// Left arrow click
+		arrowLeft.addEventListener("click", function() {
+			if(current === 0) {
+				current = sliderImages.length;
+			}
+			slideLeft();
+		});
+
+		// Right arrow click
+		arrowRight.addEventListener("click", function() {
+			if(current === sliderImages.length - 1) {
+				current = -1; 
+			}
+			slideRight();
+		});
+
+
+		startSlide();
+	</script>
 </body>
 </html>
