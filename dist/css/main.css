@@ -6,7 +6,7 @@ body {
   height: 100vh;
   line-height: 1.5;
   margin: 0;
-  display: grid; }
+  /* 	display: grid; */ }
 
 a {
   text-decoration: none; }
@@ -26,15 +26,14 @@ header, footer {
   background-color: #0050f7;
   color: #fff;
   padding: 10px 15px;
-  border: none;
+  border: 2px solid #0050f7;
   border-radius: 25px;
   text-align: center; }
 
 .btn:hover {
   background: none;
   color: #fff;
-  border: 2px solid #fff;
-  margin: 40px 0 40px 0; }
+  border: 2px solid #fff; }
   .btn:hover i {
     border-color: #fff; }
 
@@ -108,44 +107,14 @@ header {
   border-bottom: 4px solid #0050f7;
   color: #0050f7; }
 
-/* #slider {
-	min-height: 400px;
-	background: url("../img/slide1.png");
-	background-size: cover;
-	background-position: 0 0;
-	text-align: center;
-	color: #fff;
-	p {
-		max-width: 80%;
-		margin: 1.5em auto;
-	}
+article {
+  margin: 2em 0; }
+  article ul {
+    list-style-type: circle;
+    padding-inline-start: 1.1em; }
+  article li {
+    display: list-item; }
 
-	// Making slider a grid
-	.content {
-		display: grid;
-		grid-template-areas:
-		 "left sliderContent right";
-		grid-template-columns: 1fr auto 1fr;	
-	}
-
-	#left {
-		grid-area: left;
-		line-height: 1;
-	}
-
-	#right {
-		grid-area: right;
-		line-height: 1;
-		justify-self: end;
-	}
-
-	.sliderContent {
-		grid-area: sliderContent;
-	}
-} */
-/* .wrapSlide {
-	position: relative;
-} */
 #slider {
   position: relative; }
 
@@ -171,10 +140,9 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center; }
-
-.slideContent span {
-  width: 50%;
-  color: #fff; }
+  .slideContent span {
+    width: 60%;
+    color: #fff; }
 
 .arrow {
   cursor: pointer;
@@ -187,6 +155,10 @@ header {
   line-height: 1em;
   border-radius: 50%;
   border: 0.3em solid #fff; }
+  .arrow:hover {
+    border: 0.3em solid #0050f7; }
+    .arrow:hover i {
+      border-color: #0050f7; }
 
 #arrowLeft {
   top: 50%;
@@ -197,21 +169,6 @@ header {
   right: 0;
   top: 50%;
   bottom: 50%; }
-
-.slideControl {
-  margin: auto 0;
-  width: 1em;
-  height: 1em;
-  padding: 1em;
-  border-radius: 50%;
-  border: 0.3em solid white; }
-
-.slideControl:hover {
-  background: none;
-  color: #0050f7;
-  border: 0.3em solid #0050f7; }
-  .slideControl:hover i {
-    border-color: #0050f7; }
 
 .news {
   text-align: center; }
@@ -301,14 +258,6 @@ footer {
 
 .social .yt {
   background-position: -52px -118px; }
-
-article {
-  margin: 2em 0; }
-  article ul {
-    list-style-type: circle;
-    padding-inline-start: 1.1em; }
-  article li {
-    display: list-item; }
 
 @media screen and (max-width: 864px) {
   #hero {
